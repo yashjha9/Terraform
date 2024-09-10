@@ -34,8 +34,8 @@ It introduces concept of Private cloud in the world of Public cloud.
 - Here taking 2 instances, but in real time, for High Availability Auto scaling is used with Max, Min, desired capacity set.
 - Create 2 instances, One instance in Public Subnet and Second Instance in Private Subnet.
 - As Instance created in Private subnet, it will not have Public IP.
-- The Instance which will be created in Public subnet will act as  Baston Host, this Baston Host will be used to connect and deploy application into the Private instance.
-- There are multiple advantages of using Baston host (or Jump server), instead of directly connecting to the server, user can connect through baston, so that there will be proper login mechanisms, can do proper auditing like who is accessing private subnet. Bunch of rules can be configured in Baston host where traffic actually go to app through Baston host.
+- The Instance which will be created in Public subnet will act as  Bastion Host, this Bastion Host will be used to connect and deploy application into the Private instance.
+- There are multiple advantages of using Bastion host (or Jump server), instead of directly connecting to the server, user can connect through bastion, so that there will be proper login mechanisms, can do proper auditing like who is accessing private subnet. Bunch of rules can be configured in Bastion host where traffic actually go to app through Bastion host.
 - Create Target group 
 - Create LB and attach the Private instance as a Target group to the LoadBalancer. 
 
@@ -51,7 +51,7 @@ It introduces concept of Private cloud in the world of Public cloud.
 - Create the NAT Gateway in Public Subnet and Allocate elastic IP to NAT gateway.
 - Make a Route entry for NAT Gateway inside the Private Subnet with destination cidr 0.0.0.0/0
 - Create Security group by selecting new VPC and open the ports for SSH (Port 22), HTTP (Port 80).
--  Connect to Baston Host and copy the .pem file inside the Baston Host.
+-  Connect to Bastion Host and copy the .pem file inside the Bastion Host.
 - Change the permission of .pem file,
 ```bash
     chmod 400 <.pem file name>

@@ -1,4 +1,4 @@
-#Point to be Noted:
+# Point to be Noted:
 
 - Terraform script will create all the resources.
 - Manually connect to the Bastion Host and through this server connect to private instances using key which is uploaded to Bation Host using Provisioners.

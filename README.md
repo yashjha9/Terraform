@@ -72,7 +72,7 @@ Download the binary file of Terraform
 Unzip the binary
 
 ```bash
-  unzip terraform_1.9.4_linux_amd64.zip
+  unzip terraform_1.9.7_linux_amd64.zip
 ```
 
 Move Terraform file to bin folder
